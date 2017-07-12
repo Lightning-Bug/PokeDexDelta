@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ballagain"
+
+    >
+
+    <Button
+        android:background="@drawable/bdesign2"
+        android:id="@+id/hist"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:onClick="clear"
+        android:padding="5dp"
+        android:text="Clear History"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/Text"
+        android:layout_alignEnd="@+id/Text"
+        android:layout_marginRight="21dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:id="@+id/history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="13dp"
+        android:text="History"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textSize="25sp"
+        android:textStyle="bold|italic" />
+
+    <EditText
+        android:layout_marginBottom="10dp"
+        android:id="@+id/Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@android:color/holo_blue_light"
+        android:ems="10"
+        android:hint="Pokemon Name to delete"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textStyle="bold|italic"
+        android:layout_above="@+id/delete"
+        android:layout_centerHorizontal="true" />
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="250dp"
+        android:layout_height="300dp"
+        android:isScrollContainer="true"
+        android:padding="10dp"
+        android:layout_above="@+id/hist"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/bdesign"
+        android:onClick="deletepoke"
+        android:text="Delete"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:layout_above="@+id/list"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"/>
+
+</RelativeLayout>

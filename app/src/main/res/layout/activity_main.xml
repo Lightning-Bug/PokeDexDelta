@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:isScrollContainer="true"
+    tools:context="comnitt.boston.pokedexdelta.MainActivity"
+    android:background="@drawable/aish">
+
+<!-- <layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+   tools:context="comnitt.boston.pokedex.MainActivity"
+    >
+
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:isScrollContainer="true"
+    >
+
+   -->
+    <LinearLayout
+        android:id="@+id/searchlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:background="?android:attr/windowBackground"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/history"
+        android:layout_alignEnd="@+id/history">
+
+        <EditText
+            android:id="@+id/Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:ems="10"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:foregroundGravity="center_vertical"
+            android:hint="Enter Pokemon Name"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_red_light"
+            android:textStyle="bold|italic" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:background="@drawable/layoutback"
+        android:id="@+id/screen"
+        android:layout_width="230dp"
+        android:layout_height="330dp"
+        android:isScrollContainer="true"
+        android:visibility="invisible"
+        android:gravity="center"
+        android:padding="5dp"
+        android:layout_below="@+id/search"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp">
+
+        <TextView
+
+            android:id="@+id/Pokemon"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_above="@+id/id"
+            android:layout_alignEnd="@+id/id"
+            android:layout_alignRight="@+id/id"
+            android:text="Pokemon Name"
+            android:layout_marginLeft="4dp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@android:color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:background="@drawable/border"
+            android:id="@+id/PokemonImage"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:visibility="visible"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="40dp"
+            android:src="@drawable/ballzz"
+            />
+
+        <LinearLayout
+            android:id="@+id/id"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@+id/PokemonImage"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ball"
+                android:background="#0F00FF"
+                android:layout_marginLeft="50dp"/>
+
+            <TextView
+                android:id="@+id/Text2"
+                android:layout_marginLeft="29dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="TextView"
+                android:paddingTop="2dp"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/typelayout"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@+id/id"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                app:srcCompat="@drawable/ballzz"
+                android:scaleType="centerCrop"
+                />
+
+            <TextView
+                android:id="@+id/tText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Type"
+                android:textAllCaps="true"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+
+         <LinearLayout
+             android:id="@+id/weightlayout"
+             android:layout_width="match_parent"
+             android:layout_height="30dp"
+             android:layout_below="@+id/typelayout"
+             android:layout_marginBottom="10dp"
+             android:layout_marginLeft="10dp"
+             android:layout_marginRight="10dp"
+             android:orientation="horizontal">
+
+
+             <ImageView
+                 android:id="@+id/imageView3"
+                 android:layout_width="wrap_content"
+                 android:layout_height="match_parent"
+                 android:layout_marginLeft="49dp"
+                 app:srcCompat="@drawable/weight" />
+
+             <TextView
+                 android:id="@+id/wText"
+                 android:layout_marginTop="2dp"
+                 android:layout_width="wrap_content"
+                 android:layout_height="match_parent"
+                 android:layout_marginLeft="30dp"
+                 android:text="TextView"
+                 android:textAllCaps="true"
+                 android:textSize="15sp"
+                 android:textStyle="bold" />
+         </LinearLayout>
+
+         <LinearLayout
+             android:id="@+id/heightlayout"
+             android:layout_width="match_parent"
+             android:layout_height="30dp"
+             android:layout_below="@+id/weightlayout"
+             android:layout_marginLeft="10dp"
+             android:layout_marginRight="10dp"
+             android:orientation="horizontal">
+
+
+             <ImageView
+                 android:id="@+id/imageView4"
+                 android:layout_width="wrap_content"
+                 android:layout_height="match_parent"
+                 android:layout_marginLeft="49dp"
+                 app:srcCompat="@drawable/height" />
+
+             <TextView
+                 android:id="@+id/hText"
+                 android:layout_width="wrap_content"
+                 android:layout_height="match_parent"
+                 android:layout_marginLeft="29dp"
+                 android:text="xxxxxx"
+                 android:layout_marginTop="2dp"
+                 android:textColor="@android:color/black"
+                 android:textSize="15sp" />
+
+         </LinearLayout>
+
+     </RelativeLayout>
+
+    <Button
+        android:id="@+id/history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:background="@drawable/dialogborder"
+        android:onClick="history"
+        android:text="History"
+        android:textColor="@android:color/holo_blue_bright" />
+
+     <Button
+         android:background="@drawable/buttondesign"
+         android:id="@+id/search"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center_vertical"
+         android:layout_weight="1"
+         android:onClick="search"
+         android:text="Search"
+         android:textStyle="bold"
+         android:layout_below="@+id/searchlayout"
+         android:layout_centerHorizontal="true" />
+
+ </RelativeLayout>
+
+
